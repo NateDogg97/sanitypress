@@ -18,7 +18,7 @@ export default async function RootLayout({
 		<html lang="en" suppressHydrationWarning>
 			{/* <GoogleTagManager gtmId='' /> */}
 
-			<body className="bg-canvas text-ink">
+			<body>
 				<ThemeProvider
 					attribute="class"
 					defaultTheme="system"
