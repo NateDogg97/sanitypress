@@ -43,7 +43,11 @@ export default defineType({
 		defineField({
 			name: 'publishDate',
 			type: 'date',
+			options: {
+				dateFormat: 'MMM Do YYYY'
+			},
 			validation: (Rule) => Rule.required(),
+			initialValue: () => new Date().toISOString().split('T')[0],
 			group: 'content',
 		}),
 		defineField({
