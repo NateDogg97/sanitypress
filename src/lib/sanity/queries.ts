@@ -7,6 +7,7 @@ export const linkQuery = groq`
 
 const navigationQuery = groq`
 	title,
+	displayThemeToggle,
 	items[]{
 		${linkQuery},
 		link{ ${linkQuery} },

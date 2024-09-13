@@ -15,11 +15,13 @@ declare global {
 			social?: Navigation
 			copyright?: any
 			ogimage?: string
+			displayThemeToggle: boolean
 		}>
 
 		type Navigation = SanityDocument<{
 			title: string
 			items?: (Link | LinkList)[]
+			displayThemeToggle: boolean
 		}>
 
 		type Announcement = SanityDocument<{

@@ -18,6 +18,13 @@ export default defineType({
 			type: 'array',
 			of: [{ type: 'link' }, { type: 'link.list' }],
 		}),
+		defineField({
+			name: 'displayThemeToggle',
+			title: 'Display Theme Toggle',
+			type: 'boolean',
+			description: 'Enable to show a theme toggle in the navigation',
+			initialValue: false,
+		}),
 	],
 	preview: {
 		select: {

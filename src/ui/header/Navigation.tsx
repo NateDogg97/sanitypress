@@ -1,6 +1,7 @@
 import { getSite } from '@/lib/sanity/queries'
 import CTA from '@/ui/CTA'
 import LinkList from './LinkList'
+import ThemeToggle from './ThemeToggle'
 
 export default async function Menu() {
 	const { headerMenu } = await getSite()
@@ -19,6 +20,8 @@ export default async function Menu() {
 						return null
 				}
 			})}
+
+			{headerMenu?.displayThemeToggle && <ThemeToggle />}
 		</nav>
 	)
 }

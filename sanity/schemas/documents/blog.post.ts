@@ -47,7 +47,7 @@ export default defineType({
 				dateFormat: 'MMM Do YYYY'
 			},
 			validation: (Rule) => Rule.required(),
-			initialValue: () => new Date().toISOString().split('T')[0],
+			initialValue: () => new Date(new Date().getTime() - new Date().getTimezoneOffset() * 60000).toISOString().split('T')[0],
 			group: 'content',
 		}),
 		defineField({
