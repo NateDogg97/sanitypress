@@ -7,9 +7,10 @@ import CTAList from '@/ui/CTAList'
 import Toggle from './Toggle'
 import { cn } from '@/lib/utils'
 import css from './Header.module.css'
+import ThemeToggle from './ThemeToggle'
 
 export default async function Header() {
-	const { title, logo, ctas } = await getSite()
+	const { title, logo, ctas, headerMenu } = await getSite()
 
 	const logoImage = logo?.image?.dark || logo?.image?.default
 
@@ -47,6 +48,8 @@ export default async function Header() {
 					ctas={ctas}
 					className="[grid-area:ctas] max-md:*:w-full max-md:header-closed:hidden md:ml-auto"
 				/>
+
+				{headerMenu?.displayThemeToggle && <ThemeToggle />}
 
 				<Toggle />
 			</div>
