@@ -24,7 +24,7 @@
 	.filter {
 		position: relative;
 
-		&:global(.ghost) {
+		&:global(.ghost:not(:hover)) {
 			background: none !important;
 			backdrop-filter: none !important;
 		}

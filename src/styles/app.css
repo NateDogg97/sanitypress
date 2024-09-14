@@ -160,11 +160,11 @@
 	}
 
 	.action-outline {
-		@apply _btn frosted-glass text-balance rounded border border-accent/10 bg-gradient-to-br from-canvas/70 to-canvas text-accent hover:border-accent/15;
+		@apply _btn frosted-glass text-balance rounded border border-foreground/10 bg-gradient-to-br from-canvas/70 to-background text-accent hover:border-accent/15;
 	}
 
 	.ghost {
-		@apply _btn frosted-glass rounded hover:bg-accent/5;
+		@apply _btn frosted-glass rounded hover:bg-foreground/5;
 	}
 
 	.link {
