@@ -5,6 +5,7 @@ import { Moon, Sun } from "lucide-react"
 import { useTheme } from "next-themes"
 
 import { Button } from "@/ui/components/button"
+import { cn } from '@/lib/utils'
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -12,11 +13,13 @@ import {
   DropdownMenuTrigger,
 } from "@/ui/components/dropdown-menu"
 
-export default function ThemeToggle() {
+export default function ThemeToggle({ 
+  className 
+}: React.ComponentProps<'div'>) {
   const { setTheme } = useTheme()
 
   return (
-    <div className="flex justify-end">
+    <div className={cn('', className)}>
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <Button variant="outline" size="icon">

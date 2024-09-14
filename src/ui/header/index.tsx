@@ -48,8 +48,12 @@ export default async function Header() {
 					ctas={ctas}
 					className="[grid-area:ctas] max-md:*:w-full max-md:header-closed:hidden md:ml-auto"
 				/>
-
-				{headerMenu?.displayThemeToggle && <ThemeToggle />}
+				
+				{headerMenu?.displayThemeToggle && 
+					<ThemeToggle 
+						className="justify-end hidden md:flex"
+					/>
+				}
 
 				<Toggle />
 			</div>
