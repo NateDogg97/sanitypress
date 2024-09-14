@@ -3,6 +3,7 @@
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import { categoryStore } from '../store'
+import { Button } from '@/ui/components/button'
 import Category from '../Category'
 import { cn } from '@/lib/utils'
 import css from './FilterList.module.css'
@@ -19,17 +20,17 @@ export default function Filter({
 	useEffect(reset, [usePathname()])
 
 	return (
-		<button
+		<Button
+			variant={selected === value ? "default" : "ghost"}
 			className={cn(
 				css.filter,
 				'!py-1',
-				selected === value
-					? 'action *:text-background/50'
-					: 'ghost border border-transparent',
+				'font-light',
+				selected === value && '*:text-primary-foreground'
 			)}
 			onClick={() => setSelected(value)}
 		>
 			<Category label={label} />
-		</button>
+		</Button>
 	)
 }
