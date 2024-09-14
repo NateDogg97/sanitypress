@@ -26,8 +26,8 @@
 	}
 
 	html {
-		accent-color: theme('colors.accent');
-		caret-color: theme('colors.accent');
+		accent-color: hsl(var(--accent));
+    	caret-color: hsl(var(--accent));
 		scroll-behavior: smooth;
 	}
 
@@ -42,6 +42,7 @@
 	::-webkit-details-marker {
 		display: none;
 	}
+
     :root {
 		--background: 0 0% 100%;
 		--foreground: 0 0% 3.9%;
@@ -140,7 +141,7 @@
 	}
 
 	.text-gradient {
-		@apply bg-gradient-to-br from-accent/5 to-accent bg-clip-text text-transparent;
+		@apply bg-gradient-to-br from-accent-foreground/5 to-accent-foreground bg-clip-text text-transparent;
 	}
 
 	/* ctas, links */
@@ -155,7 +156,7 @@
 	}
 
 	.action {
-		@apply _btn frosted-glass text-balance rounded border border-transparent bg-gradient-to-br from-accent/70 to-accent text-white shadow;
+		@apply _btn frosted-glass text-balance rounded border border-transparent bg-gradient-to-br from-foreground/70 to-foreground text-background shadow;
 	}
 
 	.action-outline {

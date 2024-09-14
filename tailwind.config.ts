@@ -9,6 +9,7 @@ const config: Config = {
     		colors: {
     			ink: '#000',
     			canvas: '#fff',
+				theme: 'hsl(from hsl(var(--background)) h s l / .5)',
     			accent: {
     				DEFAULT: 'hsl(var(--accent))',
     				foreground: 'hsl(var(--accent-foreground))'

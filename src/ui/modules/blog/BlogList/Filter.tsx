@@ -24,7 +24,7 @@ export default function Filter({
 				css.filter,
 				'!py-1',
 				selected === value
-					? 'action *:text-white/50'
+					? 'action *:text-accent/50'
 					: 'ghost border border-transparent',
 			)}
 			onClick={() => setSelected(value)}
